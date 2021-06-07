@@ -2,15 +2,19 @@ const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
 
-const port = process.env.PORT || 4001;
+const PORT = process.env.PORT || 5000;
 const index = require("./routes/index");
 
 const app = express();
 app.use(index);
 
-const server = http.createServer(app);
-
-const io = socketIo(server);
+const httpServer = http.createServer(app);
+const io = socketIo(httpServer, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"]
+  }
+});
 
 let interval;
 
@@ -32,4 +36,4 @@ const getApiAndEmit = socket => {
   socket.emit("FromAPI", response);
 };
 
-server.listen(port, () => console.log(`Listening on port ${port}`));
+httpServer.listen(PORT, () => console.log(`Listening on port ${PORT}`));
