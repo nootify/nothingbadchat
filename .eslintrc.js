@@ -3,13 +3,14 @@ module.exports = {
     node: true,
     browser: true,
     es2021: true,
-    jest: true,
+    'jest/globals': true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
+    'plugin:jest/recommended',
   ],
   parser: 'babel-eslint',
   parserOptions: {
