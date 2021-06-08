@@ -31,23 +31,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint './**/*.{js,jsx}'",
-    "lint:fix": "eslint './**/*.{js,jsx}' --fix"
+    "lint": "eslint '**/*.{js,jsx}'",
+    "lint:fix": "eslint '**/*.{js,jsx}' --fix"
   },
   "lint-staged": {
-    "./**/*.{js,jsx}": "eslint --fix",
-    "./**/*.{js,jsx,json,css,scss,md}": "prettier --write"
+    "**/*.{js,jsx}": "eslint --fix",
+    "**/*.{js,jsx,json,css,scss,md}": "prettier --write"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
