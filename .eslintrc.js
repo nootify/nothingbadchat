@@ -6,11 +6,11 @@ module.exports = {
     'jest/globals': true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
+    'react-app',
+    'react-app/jest',
     'airbnb',
+    'airbnb/hooks',
     'plugin:prettier/recommended',
-    'plugin:jest/recommended',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -20,8 +20,8 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
-  ignorePatterns: ['build', 'coverage'],
+  plugins: ['prettier'],
+  ignorePatterns: ['build', 'coverage', 'node_modules'],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-uses-react': 'off',
