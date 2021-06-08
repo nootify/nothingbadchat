@@ -11,8 +11,8 @@ module.exports = {
     'airbnb',
     'plugin:prettier/recommended',
   ],
+  parser: 'babel-eslint',
   parserOptions: {
-    parser: 'babel-eslint',
     ecmaFeatures: {
       jsx: true,
     },
@@ -20,6 +20,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'prettier'],
+  ignorePatterns: ['build', 'coverage'],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-uses-react': 'off',
