@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "socket.io": "^4.3.2",
+    "socket.io-client": "^4.3.2",
     "vue": "^3.0.0",
+    "vue-3-socket.io": "^1.0.4",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
@@ -25,6 +29,7 @@
     "@vue/test-utils": "^2.0.0-0",
     "babel-eslint": "^10.1.0",
     "chai": "^4.1.2",
+    "dotenv": "^10.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
